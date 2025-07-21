@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“三阶梯”员工培养体系方案</title>
+
+    <script src="https://cdn.tailwindcss.com?_v=3.4.4"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #e73c2c;
+            --secondary: #111111;
+            --accent: #f59e0b;
+            --text-light: #f8f9fa;
+            --text-dark: #212529;
+            --border-light-transparent: rgba(255, 255, 255, 0.1);
+            --primary-transparent-bg: rgba(231, 60, 44, 0.1);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--secondary);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 { text-wrap: balance; }
+        p, .custom-card, .timeline-item { text-wrap: pretty; }
+
+        .slide-section {
+            min-height: 100vh;
+            padding: 5rem 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gradient-bg { background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%); }
+        .pattern-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e73c2c' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .sequoia-red { color: var(--primary); }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+
+        .custom-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            border-radius: 0.75rem; padding: 1.5rem;
+            border: 1px solid var(--border-light-transparent);
+            transition: all 0.3s ease; height: 100%;
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(231, 60, 44, 0.3);
+        }
+        
+        .timeline-item { position: relative; padding-left: 30px; padding-bottom: 2rem; }
+        .timeline-item::before { content: ""; position: absolute; left: 0; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 10px var(--primary); }
+        .timeline-item::after { content: ""; position: absolute; left: 5px; top: 1rem; bottom: 0; width: 2px; background: rgba(231, 60, 44, 0.2); }
+        .timeline-item:last-child::after { display: none; }
+
+        @media print {
+            body { background-color: white !important; color: #333 !important; font-family: 'Times New Roman', serif; }
+            .slide-section { min-height: auto !important; padding: 1cm 0 !important; page-break-inside: avoid !important; break-inside: avoid !important; }
+            .gradient-text, .sequoia-red { background: none !important; color: #e73c2c !important; -webkit-print-color-adjust: exact !important; color-adjust: exact !important; }
+            .custom-card, .highlight-box, .quote-box { background: #f0f0f0 !important; border: 1px solid #ccc !important; box-shadow: none !important; backdrop-filter: none !important; }
+            .pattern-bg, .gradient-bg { background: none !important; }
+            [data-aos] { transform: none !important; opacity: 1 !important; }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <section class="slide-section gradient-bg">
+        <div class="pattern-bg"></div>
+        <div class="container mx-auto px-4 text-center z-10">
+            <div data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">关于建立<span class="sequoia-red">“三阶梯”</span>员工培养体系的方案</h1>
+                <h2 class="text-3xl md:text-5xl font-bold gradient-text mb-6">系统规划 · 专业发展 · 驱动未来</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300">为系统性规划员工职业发展，建设一支专业化、高水平的人才队伍，以适应中心业务发展的长远需求。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide-section relative">
+        <div class="pattern-bg"></div>
+        <div class="container mx-auto px-4 z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold">直面挑战：我们亟待解决的四大痛点</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl sequoia-red mb-4"><i class="fas fa-stairs"></i></div>
+                    <h3 class="text-xl font-bold mb-2">晋升通道模糊</h3>
+                    <p class="text-gray-400">提拔路线不清晰，员工目标感缺失，积极性难以调动。</p>
+                </div>
+                <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl sequoia-red mb-4"><i class="fas fa-network-wired"></i></div>
+                    <h3 class="text-xl font-bold mb-2">部门协作壁垒</h3>
+                    <p class="text-gray-400">机构墙高筑，跨部门协作成本巨大，项目推进效率低下。</p>
+                </div>
+                <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl sequoia-red mb-4"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3 class="text-xl font-bold mb-2">复杂难题难解</h3>
+                    <p class="text-gray-400">个人能力跟不上业务发展，面对复杂难题时缺少攻坚力量。</p>
+                </div>
+                <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl sequoia-red mb-4"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="text-xl font-bold mb-2">领军人才缺失</h3>
+                    <p class="text-gray-400">缺少能代表中心水平的专家，对外行业发声微弱。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide-section gradient-bg">
+        <div class="container mx-auto px-4 z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold">“三阶梯”培养体系：一图概览</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-300">一条清晰的职业发展路径，从融入到引领，每一步都精心规划。</p>
+            </div>
+            <div class="relative flex flex-col items-center gap-4">
+                <div class="w-full max-w-md custom-card !p-6 !border-red-500/30" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-left">
+                        <p class="text-sm sequoia-red font-bold">第一阶梯</p>
+                        <h3 class="text-2xl font-bold gradient-text">“集先锋”平台</h3>
+                        <p class="text-gray-300 mt-2"><strong>面向：</strong>新入职及青年员工 → <strong>目标：</strong>快速融入，夯实基础</p>
+                    </div>
+                </div>
+                <div class="text-2xl text-gray-500" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-arrow-down"></i></div>
+                <div class="w-full max-w-md custom-card !p-6 !border-amber-500/30" data-aos="fade-up" data-aos-delay="300">
+                     <div class="text-left">
+                        <p class="text-sm sequoia-red font-bold">第二阶梯</p>
+                        <h3 class="text-2xl font-bold gradient-text">“服务专班”平台</h3>
+                        <p class="text-gray-300 mt-2"><strong>面向：</strong>业务骨干 → <strong>目标：</strong>深化能力，攻坚克难</p>
+                    </div>
+                </div>
+                 <div class="text-2xl text-gray-500" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-arrow-down"></i></div>
+                <div class="w-full max-w-md custom-card !p-6 !border-orange-500/30" data-aos="fade-up" data-aos-delay="500">
+                     <div class="text-left">
+                        <p class="text-sm sequoia-red font-bold">第三阶梯</p>
+                        <h3 class="text-2xl font-bold gradient-text">“中心首席”平台</h3>
+                        <p class="text-gray-300 mt-2"><strong>面向：</strong>顶尖专家 → <strong>目标：</strong>战略引领，知识传承</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide-section relative">
+        <div class="pattern-bg"></div>
+        <div class="container mx-auto px-4 z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-sm text-gray-400 uppercase tracking-wider">第一阶段 · 基础与融入</p>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2">“集先锋”青年员工培养平台</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-300">目标在1-3年内帮助新员工快速熟悉业务，掌握核心技能，融入组织文化。</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="custom-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-[var(--primary-transparent-bg)] rounded-full flex items-center justify-center mb-4 ring-1 ring-red-500/30"><i class="fas fa-project-diagram text-2xl sequoia-red"></i></div>
+                    <h3 class="text-xl font-bold mb-2">跨部门项目参与</h3>
+                    <p class="text-gray-400">以项目制参与重点活动，承担宣传、组织等辅助工作，拓宽业务视野。</p>
+                </div>
+                <div class="custom-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-[var(--primary-transparent-bg)] rounded-full flex items-center justify-center mb-4 ring-1 ring-red-500/30"><i class="fas fa-keyboard text-2xl sequoia-red"></i></div>
+                    <h3 class="text-xl font-bold mb-2">通用技能培训</h3>
+                    <p class="text-gray-400">定期组织文案写作、PPT制作、新媒体应用等通用技能的内部培训与分享。</p>
+                </div>
+                <div class="custom-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-[var(--primary-transparent-bg)] rounded-full flex items-center justify-center mb-4 ring-1 ring-red-500/30"><i class="fas fa-users text-2xl sequoia-red"></i></div>
+                    <h3 class="text-xl font-bold mb-2">团队文化建设</h3>
+                    <p class="text-gray-400">通过共同参与中心大型活动，增强团队协作精神与组织归属感。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide-section gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-sm text-gray-400 uppercase tracking-wider">第二阶段 · 深化与攻坚</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-2 gradient-text">“重点企业服务专班”</h2>
+                    <p class="mt-6 text-lg text-gray-300">主要面向有一定工作经验的业务骨干，旨在培养成员解决复杂问题、战略思考和资源整合的能力。</p>
+                    <div class="mt-8 border-l-4 border-[var(--primary)] pl-6">
+                        <p class="text-xl italic text-gray-200">聚焦核心难题，创新服务模式，提升战略视野。</p>
+                        <p class="mt-2 text-gray-400">— 核心定位</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <div class="custom-card p-8">
+                        <h4 class="text-2xl font-bold mb-6">主要任务</h4>
+                        <div class="timeline-item">
+                            <h5 class="font-bold text-lg mb-1">聚焦核心难题</h5>
+                            <p class="text-gray-400">围绕“招工难”与“就业难”，开展深度调研与服务。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5 class="font-bold text-lg mb-1">创新服务模式</h5>
+                            <p class="text-gray-400">探索“政策+服务”联动，提供精准化、定制化的解决方案。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5 class="font-bold text-lg mb-1">提升战略视野</h5>
+                            <p class="text-gray-400">参与高层次对外合作洽谈，直面市场与客户。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="slide-section relative">
+        <div class="pattern-bg"></div>
+        <div class="container mx-auto px-4 z-10 text-center">
+             <div class="max-w-4xl mx-auto">
+                <div data-aos="fade-up">
+                    <p class="text-sm text-gray-400 uppercase tracking-wider">第三阶段 · 引领与成熟</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-6">“中心首席”专家引领平台</h2>
+                    <p class="text-lg text-gray-300">面向中心内部选拔的顶尖专家，打造“就创培”领域的思想库和专业带头人。</p>
+                </div>
+                <div class="mt-12 grid sm:grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="highlight-box bg-[var(--primary-transparent-bg)] border-l-4 border-[var(--primary)] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="font-bold text-lg mb-2 sequoia-red flex items-center"><i class="fas fa-brain mr-3"></i>战略研究</h4>
+                        <p class="text-gray-300">开展前瞻性研究，为中心发展和重要决策提供专业意见。</p>
+                    </div>
+                    <div class="highlight-box bg-[var(--primary-transparent-bg)] border-l-4 border-[var(--primary)] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                         <h4 class="font-bold text-lg mb-2 sequoia-red flex items-center"><i class="fas fa-book-reader mr-3"></i>知识传承</h4>
+                        <p class="text-gray-300">建立导师制度，指导后备梯队，开发提炼精品课程和工作方法。</p>
+                    </div>
+                    <div class="highlight-box bg-[var(--primary-transparent-bg)] border-l-4 border-[var(--primary)] p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="font-bold text-lg mb-2 sequoia-red flex items-center"><i class="fas fa-bullhorn mr-3"></i>品牌建设</h4>
+                        <p class="text-gray-300">代表中心参与重大学术交流活动，提升中心的专业品牌形象。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide-section gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold">实施与保障机制</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-300">建立配套机制，确保体系有效运行，激发员工的参与热情和创造力。</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="custom-card text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-[var(--primary-transparent-bg)] rounded-full flex items-center justify-center mb-4 ring-1 ring-red-500/30 mx-auto"><i class="fas fa-check-double text-2xl sequoia-red"></i></div>
+                    <h3 class="text-xl font-bold mb-2">晋级与选拔机制</h3>
+                    <p class="text-gray-400">公开标准，流程公正透明，综合考量业绩、年限、能力与意愿。</p>
+                </div>
+                <div class="custom-card text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-[var(--primary-transparent-bg)] rounded-full flex items-center justify-center mb-4 ring-1 ring-red-500/30 mx-auto"><i class="fas fa-chalkboard-teacher text-2xl sequoia-red"></i></div>
+                    <h3 class="text-xl font-bold mb-2">培养与导师机制</h3>
+                    <p class="text-gray-400">建立“首席带专班、专班带先锋”的导师体系，促进经验交流。</p>
+                </div>
+                <div class="custom-card text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-[var(--primary-transparent-bg)] rounded-full flex items-center justify-center mb-4 ring-1 ring-red-500/30 mx-auto"><i class="fas fa-award text-2xl sequoia-red"></i></div>
+                    <h3 class="text-xl font-bold mb-2">激励与评估机制</h3>
+                    <p class="text-gray-400">表现成果纳入绩效、职称评定，并给予相应资源支持。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black/30">
+        <div class="container mx-auto px-4 text-center">
+            <div class="inline-block bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 p-6">
+                <h3 class="text-2xl font-bold sequoia-red">就业服务中心</h3>
+                <p class="text-sm text-gray-400 mt-2">&copy; 2025 · 人才发展部 · 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
